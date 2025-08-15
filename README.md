@@ -99,7 +99,7 @@ Database ini terdiri dari 7 tabel utama, di antaranya:
 Menggunakan sistem **Agentic**,
 Terdapat 2 **Tool Calling** pada sistem RAG ini, 
 - `get_database_schema` (**core/agent.py Line 36**) yang digunakan untuk mengambil context table yang tersedia didatabase.
-- `run_sql_query` (**core/agent.py Line 51**) yang digunakan running SQL yang telah digenerate LLM menggunakan context pertanyaan user dan schema yang telah diambil. (Metode ini biasanya diperlukan step tambahan seperti menggunakan similarity search dengan embedding untuk mengambil table yang relevan untuk mengurangi **token usage** dan irrelevant context. Karena database masih terbilang kecil, sehingga tidak diperlukan)
+- `run_sql_query` (**core/agent.py Line 51**) yang digunakan untuk running SQL Query yang telah digenerate LLM menggunakan context pertanyaan user dan schema yang telah diambil. (Metode ini biasanya diperlukan step tambahan seperti menggunakan similarity search dengan embedding untuk mengambil table yang relevan untuk mengurangi **token usage** dan irrelevant context. Karena database masih terbilang kecil, sehingga tidak diperlukan)
 
 Setelah data diambil, LLM akan mencoba untuk generate jawaban dengan bahasa natural dengan context data yang diambil untuk menjawab pertanyaan dari user. Jika pertanyaan dapat dijawab tanpa perlu SQL, agent tidak akan melakukan tool calling.
 
