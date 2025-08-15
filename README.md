@@ -1,6 +1,7 @@
 # AI Chatbot for Toko Online
 
 Proyek ini adalah chatbot berbasis AI yang dirancang untuk toko online, dibangun menggunakan kombinasi **Streamlit** `FRONTEND`, **Flask** `BACKEND`, **SQLite** `DATABASE`, dan **Pydantic AI** `LLM Agentic Framework`
+
 https://github.com/user-attachments/assets/57465f82-b2ec-4d06-a7b6-8bc4c219bded
 
 
