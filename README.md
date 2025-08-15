@@ -74,7 +74,12 @@ Database ini terdiri dari 7 tabel utama, di antaranya:
    ```
 
    Dapat dilakukan pengecheckan database menggunakan database manager seperti `DBeaver`, dengan meng-koneksikan langsung file `db/toko_online.db`
-4. **Menjalankan aplikasi**:
+
+4. **Setup environment variables**:
+
+    Ubah file .env_template menjadi .env dan tambahkan Groq API KEY yang bisa didapat melalui `https://console.groq.com/keys`. jika backend ingin dijalankan diserver terpisah.. Sesuaikan url `http://backend/chat` ke arah backend dijalankan.
+
+5. **Menjalankan aplikasi**:
 
    - Untuk menjalankan backend API, gunakan Flask:
 
@@ -87,6 +92,36 @@ Database ini terdiri dari 7 tabel utama, di antaranya:
      ```bash
      streamlit run app.py
      ```
+
+## Instalasi Menggunakan Docker
+1. **Pastikan Docker sudah Terinstal**
+
+2. **Clone repository ini**:
+
+   ```bash
+   git clone https://github.com/hanungaddi/LLM-RAG-Chatbot.git
+   cd LLM-RAG-Chatbot
+   ```
+
+3. **Setup environment variables**:
+
+    Ubah file .env_template menjadi .env dan tambahkan Groq API KEY yang bisa didapat melalui `https://console.groq.com/keys`. jika backend ingin dijalankan diserver terpisah.. Sesuaikan url `http://backend/chat` ke arah backend dijalankan.
+
+4. **Build docker compose**:
+
+    - Jalankan docker compose dengan file `docker-compose.yaml`
+
+     ```bash
+     docker-compose up --build
+     ```
+
+5. **Check docker container yang berjalan**:
+
+    Jika tidak terdapat error, container dapat dilakukan pengecekan melalui
+
+    ```bash
+    docker container ps -a
+    ```
 
 ## Penggunaan
 

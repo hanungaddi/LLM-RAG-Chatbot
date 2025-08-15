@@ -1,6 +1,16 @@
 version: '3.8'
 
 services:
+  db-init:
+    # Service ini hanya untuk inisialisasi database
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    # Override perintah default untuk menjalankan skrip populasi
+    command: python db/populate_db.py
+    volumes:
+      - ./db:/app/db # Harus me-mount volume yang sama dengan backend
+
   backend:
     build:
       context: .
@@ -13,6 +23,12 @@ services:
     volumes:
       - ./db:/app/db
     restart: unless-stopped
+    # Tambahkan depends_on dengan kondisi
+    depends_on:
+      db-init:
+        # 'service_completed_successfully' berarti backend akan menunggu
+        # sampai container db-init selesai berjalan tanpa error.
+        condition: service_completed_successfully
 
   frontend:
     build:
@@ -23,6 +39,7 @@ services:
       - "8501:8501"
     volumes:
       - .:/app
+    # Frontend sekarang menunggu backend, yang sudah menunggu db-init
     depends_on:
       - backend
     restart: unless-stopped
