@@ -13,7 +13,7 @@ https://github.com/user-attachments/assets/57465f82-b2ec-4d06-a7b6-8bc4c219bded
 ## Struktur Proyek
 
 ```
-/proyek-ai-toko/
+/LLM-RAG-Chatbot/
 ├── .streamlit/
 │   └── secrets.toml        # File untuk menyimpan kredensial sensitif
 ├── core/
@@ -53,8 +53,8 @@ Database ini terdiri dari 7 tabel utama, di antaranya:
 1. **Clone repository ini**:
 
    ```bash
-   git clone https://github.com/username/proyek-ai-toko.git
-   cd proyek-ai-toko
+   git clone https://github.com/hanungaddi/LLM-RAG-Chatbot.git
+   cd LLM-RAG-Chatbot
    ```
 
 2. **Instal dependensi**:
