@@ -1,6 +1,8 @@
 # AI Chatbot for Toko Online
 
 Proyek ini adalah chatbot berbasis AI yang dirancang untuk toko online, dibangun menggunakan kombinasi **Streamlit** `FRONTEND`, **Flask** `BACKEND`, **SQLite** `DATABASE`, dan **Pydantic AI** `LLM Agentic Framework`
+https://github.com/user-attachments/assets/57465f82-b2ec-4d06-a7b6-8bc4c219bded
+
 
 ## Struktur Proyek
 
@@ -20,6 +22,18 @@ Proyek ini adalah chatbot berbasis AI yang dirancang untuk toko online, dibangun
 ├── backend.py              # Server REST API menggunakan Flask
 └── requirements.txt        # File dependensi untuk proyek ini
 ```
+
+## Database Design
+Database dirancang untuk menyimpan data esensial dari sebuah toko online, termasuk pengguna, produk, dan transaksi. Skema ini memungkinkan agent AI untuk melakukan JOIN antar tabel untuk menjawab pertanyaan yang kompleks.
+<img width="1019" height="735" alt="db_schema" src="https://github.com/user-attachments/assets/8d3750df-9a48-49b5-9d45-f117d836a710" />
+Database ini terdiri dari 7 tabel utama, di antaranya:
+- users: Menyimpan data pelanggan.
+- addresses: Menyimpan alamat user.
+- products: Katalog semua produk yang dijual.
+- products_categories: Menyimpan data kategori produk.
+- orders: Riwayat semua transaksi yang dilakukan.
+- order_items: Detail produk di dalam setiap transaksi.
+- order_tracking: Status pengiriman untuk setiap pesanan.
 
 ## Fitur
 
