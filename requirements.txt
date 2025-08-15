@@ -1,0 +1,6 @@
+streamlit
+pydantic-ai
+groq
+flask[async]
+requests
+gunicorn

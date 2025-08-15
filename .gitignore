@@ -1,0 +1,34 @@
+# --- Python Virtual Environments ---
+# Direktori environment yang umum digunakan
+.venv/
+venv/
+env/
+
+# --- Python Cache ---
+# File bytecode dan cache yang dibuat oleh Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- File Rahasia (Secrets) ---
+# JANGAN PERNAH memasukkan file ini ke dalam version control!
+.env
+.streamlit/secrets.toml
+
+# --- File Database ---
+# Database adalah data yang dihasilkan, bukan bagian dari source code.
+# Sebaiknya dibuat ulang menggunakan skrip `populate_db.py`.
+db/toko_online.db
+
+# --- Konfigurasi IDE/Editor ---
+# Folder spesifik untuk editor kode populer
+.vscode/
+.idea/
+
+# --- File spesifik OS ---
+# File metadata macOS
+.DS_Store
+
+# --- File log dan build Docker ---
+docker-compose.log

@@ -1,0 +1,32 @@
+# --- File Konfigurasi Docker & Git ---
+# File-file ini tidak diperlukan di dalam image
+Dockerfile.backend
+Dockerfile.frontend
+docker-compose.yml
+.dockerignore
+.git
+.gitignore
+README.md
+
+# --- Python Virtual Environments ---
+# Jangan pernah menyalin virtual environment ke dalam image
+.venv/
+venv/
+env/
+
+# --- Python Cache ---
+__pycache__/
+*.pyc
+
+# --- File Rahasia (Secrets) ---
+# Sangat penting untuk tidak memasukkan file rahasia ke dalam image
+.env
+.streamlit/
+
+# --- File Database ---
+# Database dikelola oleh Docker Volume, bukan bagian dari image
+db/toko_online.db
+
+# --- Konfigurasi IDE/Editor ---
+.vscode/
+.idea/
