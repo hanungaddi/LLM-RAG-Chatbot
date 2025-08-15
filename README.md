@@ -2,6 +2,11 @@
 
 Proyek ini adalah chatbot berbasis AI yang dirancang untuk toko online, dibangun menggunakan kombinasi **Streamlit** `FRONTEND`, **Flask** `BACKEND`, **SQLite** `DATABASE`, dan **Pydantic AI** `LLM Agentic Framework`
 
+Berikut adalah demo 3 pertanyaan yang diajukan:
+- Apa saja list produk yang tersedia?
+- Apakah ada garansi untuk produk tersebut? Bagaimana cara klaim garansinya? (Menggunakan Konteks Produk dari Memory chat sebelumnnya)
+- Saya sudah melakukan transaksi dengan atas nama budi, boleh minta tolong check bagaimaa kondisinya?
+
 https://github.com/user-attachments/assets/57465f82-b2ec-4d06-a7b6-8bc4c219bded
 
 
